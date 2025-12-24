@@ -62,3 +62,50 @@ A **sample dataset** is included for demo ease.
 ## 📸 Screenshots
 All feature screenshots are available in the /screenshots folder.
 
+How the Demo runs:
+
+▶️ Run on Google Colab
+You can run the AI Finance Coach directly in Google Colab.
+
+1️⃣ Install Required Libraries
+Run:
+
+!pip install -U streamlit plotly pandas google-generativeai
+2️⃣ Create the Streamlit App
+Run the cell below and paste the full app.py code inside it:
+
+%%writefile app.py
+# (Paste the full Streamlit app code here)
+3️⃣ Download Cloudflare Tunnel
+This is used to create a public URL for the Streamlit app.
+
+!wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+!chmod +x cloudflared-linux-amd64
+4️⃣ Start Streamlit
+!pkill streamlit
+!nohup streamlit run app.py --server.port 8501 --server.address 0.0.0.0 &
+5️⃣ Generate Public URL
+Run:
+
+!./cloudflared-linux-amd64 tunnel --url http://127.0.0.1:8501
+✔️ A public https link will be generated
+✔️ Open it in your browser
+🎉 The app is live!
+
+🔑 API Key
+Enter your Gemini API Key in the Streamlit sidebar to enable AI chat.
+
+📌 Notes
+Colab resets if closed, so steps must be re‑run each session
+
+Works best on desktop browser
+
+CSV must contain:
+
+date
+
+amount
+
+category
+
+type (Want / Need)

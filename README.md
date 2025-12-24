@@ -57,4 +57,6 @@ A **sample dataset** is included for demo ease.
 
 ---
 
-## 📂 Project Structure
+## 📸 Screenshots
+All feature screenshots are available in the /screenshots folder.
+

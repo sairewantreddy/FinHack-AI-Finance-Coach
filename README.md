@@ -52,6 +52,8 @@ Chat with an intelligent finance assistant:
 2️⃣ Explore dashboard insights  
 3️⃣ Run simulations  
 4️⃣ Chat with your AI Coach
+The app is best run locally or via Streamlit Cloud.
+Colab is provided as an optional demo setup.
 
 A **sample dataset** is included for demo ease.
 

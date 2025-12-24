@@ -71,19 +71,23 @@ You can run the AI Finance Coach directly in Google Colab.
 Run:
 
 !pip install -U streamlit plotly pandas google-generativeai
+
 2️⃣ Create the Streamlit App
 Run the cell below and paste the full app.py code inside it:
 
 %%writefile app.py
 # (Paste the full Streamlit app code here)
+
 3️⃣ Download Cloudflare Tunnel
 This is used to create a public URL for the Streamlit app.
 
 !wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
 !chmod +x cloudflared-linux-amd64
+
 4️⃣ Start Streamlit
 !pkill streamlit
 !nohup streamlit run app.py --server.port 8501 --server.address 0.0.0.0 &
+
 5️⃣ Generate Public URL
 Run:
 
